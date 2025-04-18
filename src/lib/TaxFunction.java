@@ -1,6 +1,11 @@
 package lib;
 
 public class TaxFunction {
+	private static final int BASE_EXCLUSION = 54000000;
+	private static final int MARRIAGE_EXCLUSION = 4500000;
+	private static final int CHILD_EXCLUSION = 1500000;
+	private static final int MAX_WORKED = 12;
+	private static final int MAX_CHILDREN = 3;
 
 	
 	/**
@@ -19,18 +24,20 @@ public class TaxFunction {
 		
 		int tax = 0;
 		
-		if (numberOfMonthWorking > 12) {
+		if (numberOfMonthWorking > MAX_WORKED) {
 			System.err.println("More than 12 month working per year");
 		}
 		
-		if (numberOfChildren > 3) {
+		if (numberOfChildren > MAX_CHILDREN) {
 			numberOfChildren = 3;
 		}
+
+		int yearlyIncome = (monthlySalary + otherMonthlyIncome) * numberOfMonthWorking;
 		
 		if (isMarried) {
-			tax = (int) Math.round(0.05 * (((monthlySalary + otherMonthlyIncome) * numberOfMonthWorking) - deductible - (54000000 + 4500000 + (numberOfChildren * 1500000))));
+			tax = (int) Math.round(0.05 * (((yearlyIncome - (BASE_EXCLUSION + MARRIAGE_EXCLUSION + (numberOfChildren * CHILD_EXCLUSION))))));
 		}else {
-			tax = (int) Math.round(0.05 * (((monthlySalary + otherMonthlyIncome) * numberOfMonthWorking) - deductible - 54000000));
+			tax = (int) Math.round(0.05 * (((yearlyIncome - BASE_EXCLUSION));
 		}
 		
 		if (tax < 0) {
