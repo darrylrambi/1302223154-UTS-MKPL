@@ -25,26 +25,26 @@ public class Employee {
 	// private int otherMonthlyIncome;
 	// private int annualDeductible;
 	
-	private String spouseName;
-	private String spouseIdNumber;
+	// private String spouseName;
+	// private String spouseIdNumber;
 
-	private List<String> childNames;
-	private List<String> childIdNumbers;
+	// private List<String> childNames;
+	// private List<String> childIdNumbers;
 	
 	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, boolean gender) {
 		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.idNumber = idNumber;
-		this.address = address;
-		this.yearJoined = yearJoined;
-		this.monthJoined = monthJoined;
-		this.dayJoined = dayJoined;
+		// this.firstName = firstName;
+		// this.lastName = lastName;
+		// this.idNumber = idNumber;
+		// this.address = address;
+		// this.yearJoined = yearJoined;
+		// this.monthJoined = monthJoined;
+		// this.dayJoined = dayJoined;
 		this.isForeigner = isForeigner;
-		this.gender = gender;
+		// this.gender = gender;
 		
-		childNames = new LinkedList<String>();
-		childIdNumbers = new LinkedList<String>();
+		// childNames = new LinkedList<String>();
+		// childIdNumbers = new LinkedList<String>();
 	}
 	
 	/**
