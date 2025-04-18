@@ -1,0 +1,23 @@
+public class SalaryInfo {
+  private int monthlySalary;
+	private int otherMonthlyIncome;
+	private int annualDeductible;
+	private int monthWorkingInYear;
+	
+  public SalaryInfo(int monthlySalary int otherMonthlyIncome, int annualDeductible, int monthWorkingInYear) {
+    this.monthlySalary = monthlySalary;
+    this.otherMonthlyIncome = otherMonthlyIncome;
+    this.annualDeductible = annualDeductible;
+    this.monthWorkingInYear = monthWorkingInYear 
+  }
+
+  public String getMonthlySalary() { return monthlySalary; }
+  public String getOtherMonthlyIncome() { return otherMonthlyIncome; }
+  public String getAnnualDeductible() { return annualDeductible; }
+  public String getMonthWorkingInYear() { return monthWorkingInYear; }
+
+  public void setMonthlySalary(String monthlySalary) { this.monthlySalary = monthlySalary; }
+  public void setOtherMonthlyIncome(String otherMonthlyIncome) { this.otherMonthlyIncome = otherMonthlyIncome; }
+  public void setAnnualDeductible(String annualDeductible) { this.annualDeductible = annualDeductible; }
+  public void setMonthWorkingInYear(String monthWorkingInYear) { this.monthWorkingInYear = monthWorkingInYear; }
+}
